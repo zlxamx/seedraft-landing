@@ -921,22 +921,18 @@ footer p {
       </div>
 
       <p style="margin-top: 24px; font-size: 14px; color: var(--olive); text-align: center; line-height: 1.6; letter-spacing: 0.3px;">
-        添加微信时请备注<strong style="color: var(--brand);">「内测」</strong>，告诉我你在写什么类型的长篇
+        添加微信时请备注<strong style="color: var(--brand);">「内测」</strong>，告诉我你在写什么类型的长篇<br>
+        <span style="font-size: 13px; color: var(--stone); margin-top: 8px; display: inline-block;">（或通过下方表单留下微信号，我会主动加你）</span>
       </p>
     </div>
 
-    <!-- Optional Form -->
-    <details style="max-width: 640px; margin: 0 auto;">
+    <!-- Jinshuju Form -->
+    <details open style="max-width: 680px; margin: 0 auto;">
       <summary style="font-family: var(--latin-ui); font-size: 14px; color: rgba(250, 249, 245, 0.7); cursor: pointer; text-align: center; padding: 12px; border-radius: 6px; transition: background 0.15s;">
         或者填写表单，我会主动联系你
       </summary>
-      <div class="form-container" style="margin-top: 20px;">
-        <form>
-          <input type="email" placeholder="你的邮箱" required />
-          <input type="text" placeholder="微信号（选填）" />
-          <textarea placeholder="你在写什么类型的长篇？遇到的最大困难是什么？（选填）" rows="4"></textarea>
-          <button type="submit">提交申请</button>
-        </form>
+      <div style="margin-top: 20px; background: var(--ivory); padding: 24px; border-radius: 8px; box-shadow: 0 4px 16px rgba(20, 19, 19, 0.2);">
+        <iframe id="goldendata_form_IUZQkN" src="https://kdu13iyo.jsjform.com/f/IUZQkN?background=white&banner=hide&inner_redirect=false&embedded=true" width="100%" frameborder="0" allowTransparency="true" height="771" style="border-radius: 6px;"></iframe>
       </div>
     </details>
   </section>
@@ -961,15 +957,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Form submission
-const form = document.querySelector('form');
-if (form) {
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    alert('感谢申请！我们会尽快联系你。');
-    form.reset();
-  });
-}
+// Jinshuju form is embedded, no local form handling needed
 
 // Scroll animations
 const observer = new IntersectionObserver((entries) => {
